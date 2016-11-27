@@ -9,7 +9,7 @@ print("\t\t\t Escuela de Formación de Tecnólogos")
 print("\t\t\t\t  Programación Avanzada")
 print("\t\t\t\tDiana Bonilla - Valeria Ochoa")
 print("Cuenta el numero de ocurrencias de palabras en un archivo")
-p= "Quirrell"
+##p= "Quirrell"
 ##def creartxt():
 ##    archivo = open('HarryPotter.txt','a')
 ##    archivo.close()
@@ -24,7 +24,7 @@ def contarPalabras():
     for renglon in data:
         for palabra in renglon.split(' '):
             if palabra == "Hagrid":
-                contador +=2
+                contador +=1
                 print(str(contador),palabra)
 ##                if palabra == "Harry":
 ##                    cont+=1
