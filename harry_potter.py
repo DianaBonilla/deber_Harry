@@ -2,7 +2,7 @@
 ##ESCUELA DE FORMACION DE TECNOLOGOS
 ##PROGRAMACION AVANZADA
 ##AUTOR:DIANA BONILLA-VALERIA OCHOA
-##TITULO: PRACTICA DE MANEJO DE ARCHIVOS
+##TITULO: OCURRENCIAS DE UNA PALABRA
 
 print("\t\t\t     Escuela Politécnica Nacional")
 print("\t\t\t Escuela de Formación de Tecnólogos")
@@ -15,27 +15,34 @@ print("Cuenta el numero de ocurrencias de palabras en un archivo")
 ##    archivo.close()
 
 def contarPalabras():
+    palabra = str(input("Ingrese la palabra: "))
     archivo=open('HarryPotter.txt','r')
-    data=archivo.readlines()
-    archivo.close()
+##    data=archivo.readlines()
+##    archivo.close()
     contador=0
-    cont=0
+##    cont=0
 
-    for renglon in data:
-        for palabra in renglon.split(' '):
-            if palabra == "Hagrid":
-                contador +=1
-                print(str(contador),palabra)
+####    for renglon in data:
+####        for palabra in renglon.split(' '):
+####            if palabra == "Hagrid":
+####                contador +=1
+####                print(str(contador),palabra)
 ##                if palabra == "Harry":
 ##                    cont+=1
 ##                    print("Hay: ", str(cont),"con la palabra Harry")
                 
-            
-def grabartxt():
-    archivo = open('NumPalaHarry.txt','a')
-    archivo.write("hola")
-    archivo.close()
+    lines = archivo.readlines()
+    for line in lines:
+        palabras = line.split(" ")
+        for p in palabras:
+            if p == palabra:
+                contador = contador + 1
+    print(contador,palabra)
+##def grabartxt():
+##    archivo = open('NumPalaHarry.txt','a')
+##    archivo.write("hola")
+##    archivo.close()
 
 ##creartxt()
 contarPalabras()
-grabartxt()
+##grabartxt()
